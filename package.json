@@ -1,0 +1,41 @@
+{
+  "name": "@mathquis/node-webp",
+  "version": "0.0.0",
+  "description": "WebP bindings for Node.js",
+  "main": "lib/index.js",
+  "binary": {
+    "module_name": "node-webp",
+    "module_path": "./lib/binding/{configuration}/{node_abi}-{platform}-{arch}/",
+    "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz",
+    "host": "https://github.com/mathquis/node-kaldi-online-nnet3-decoder/releases/download/",
+    "remote_path": "{version}"
+  },
+  "scripts": {
+    "test": "node test/index.js",
+    "clean": "cmake-js clean",
+    "build": "cmake-js compile Release && npm test",
+    "rebuild": "npm run clean && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathquis/node-webp.git"
+  },
+  "keywords": [
+    "webp"
+  ],
+  "author": "Mathieu \"Fastjack\" Quisefit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mathquis/node-webp/issues"
+  },
+  "homepage": "https://github.com/mathquis/node-webp#readme",
+  "dependencies": {
+    "@mapbox/node-pre-gyp": "^1.0.8",
+    "cmake-js": "^6.3.0",
+    "node-addon-api": "^4.3.0"
+  },
+  "devDependencies": {
+    "@mathquis/node-pre-gyp-github": "^1.0.2",
+    "canvas": "^2.9.0"
+  }
+}
